@@ -1,0 +1,37 @@
+{
+    "name": "admin-permissions-api",
+    "version": "1.0.0",
+    "description": "A basic API for administering user authentication and permissions with Firebase Authentication",
+    "main": "dist/server.js",
+    "scripts": {
+        "start": "ts-node src/server.ts",
+        "build": "tsc"
+    },
+    "dependencies": {
+        "express": "^5.1.0",
+        "firebase-admin": "^13.4.0"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.3",
+        "@types/jest": "^30.0.0",
+        "@types/node": "^22.18.10",
+        "@types/supertest": "^6.0.3",
+        "jest": "^30.2.0",
+        "supertest": "^7.1.4",
+        "ts-jest": "^29.4.5",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Harsh-rrc/3018-coding-challenge-4.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/Harsh-rrc/3018-coding-challenge-4/issues"
+    },
+    "homepage": "https://github.com/Harsh-rrc/3018-coding-challenge-4#readme"
+}
