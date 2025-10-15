@@ -5,7 +5,7 @@ import { UserRecord } from "firebase-admin/auth";
 import { auth } from "../../../config/firebaseConfig";
 
 import { HTTP_STATUS } from "../../../constants/httpConstants";
- 
+
 /**
 
 * Controller to set custom claims for a user (e.g., roles)
@@ -25,7 +25,7 @@ export const setCustomClaims = async (
     try {
 
         const { uid, claims } = req.body;
- 
+
         // Validate request body
 
         if (!uid || !claims) {
@@ -39,7 +39,7 @@ export const setCustomClaims = async (
             return;
 
         }
- 
+
         await auth.setCustomUserClaims(uid, claims);
 
         res.status(HTTP_STATUS.OK).json({
@@ -63,7 +63,7 @@ export const setCustomClaims = async (
     }
 
 };
- 
+
 /**
 
 * Controller to get user details from Firebase Auth
@@ -83,7 +83,7 @@ export const getUserDetails = async (
     try {
 
         const { uid } = req.params;
- 
+
         if (!uid) {
 
             res.status(HTTP_STATUS.BAD_REQUEST).json({
@@ -95,7 +95,7 @@ export const getUserDetails = async (
             return;
 
         }
- 
+
         const user: UserRecord = await auth.getUser(uid);
 
         res.status(HTTP_STATUS.OK).json({
